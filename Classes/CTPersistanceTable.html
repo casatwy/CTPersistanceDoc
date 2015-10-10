@@ -1,0 +1,2456 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>CTPersistanceTable Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">CTPersistance </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">CasaTaloyum</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/child">child</option>
+		
+		<option value="//api/name/queryCommand">queryCommand</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/countWithCriteria:error:">- countWithCriteria:error:</option>
+		
+		<option value="//api/name/countWithSQL:params:error:">- countWithSQL:params:error:</option>
+		
+		<option value="//api/name/countWithWhereCondition:conditionParams:isDistinct:error:">- countWithWhereCondition:conditionParams:isDistinct:error:</option>
+		
+		<option value="//api/name/deleteRecord:error:">- deleteRecord:error:</option>
+		
+		<option value="//api/name/deleteRecordList:error:">- deleteRecordList:error:</option>
+		
+		<option value="//api/name/deleteWithCriteria:error:">- deleteWithCriteria:error:</option>
+		
+		<option value="//api/name/deleteWithPrimaryKey:error:">- deleteWithPrimaryKey:error:</option>
+		
+		<option value="//api/name/deleteWithPrimaryKeyList:error:">- deleteWithPrimaryKeyList:error:</option>
+		
+		<option value="//api/name/deleteWithSql:params:error:">- deleteWithSql:params:error:</option>
+		
+		<option value="//api/name/deleteWithWhereCondition:conditionParams:error:">- deleteWithWhereCondition:conditionParams:error:</option>
+		
+		<option value="//api/name/findAllWithCriteria:error:">- findAllWithCriteria:error:</option>
+		
+		<option value="//api/name/findAllWithPrimaryKey:error:">- findAllWithPrimaryKey:error:</option>
+		
+		<option value="//api/name/findAllWithSQL:params:error:">- findAllWithSQL:params:error:</option>
+		
+		<option value="//api/name/findAllWithWhereCondition:conditionParams:isDistinct:error:">- findAllWithWhereCondition:conditionParams:isDistinct:error:</option>
+		
+		<option value="//api/name/findFirstRowWithCriteria:error:">- findFirstRowWithCriteria:error:</option>
+		
+		<option value="//api/name/findFirstRowWithSQL:params:error:">- findFirstRowWithSQL:params:error:</option>
+		
+		<option value="//api/name/findFirstRowWithWhereCondition:conditionParams:isDistinct:error:">- findFirstRowWithWhereCondition:conditionParams:isDistinct:error:</option>
+		
+		<option value="//api/name/findLatestRecordWithError:">- findLatestRecordWithError:</option>
+		
+		<option value="//api/name/findWithPrimaryKey:error:">- findWithPrimaryKey:error:</option>
+		
+		<option value="//api/name/initWithQueryCommand:">- initWithQueryCommand:</option>
+		
+		<option value="//api/name/insertRecord:error:">- insertRecord:error:</option>
+		
+		<option value="//api/name/insertRecordList:error:">- insertRecordList:error:</option>
+		
+		<option value="//api/name/updateKeyValueList:primaryKeyValue:error:">- updateKeyValueList:primaryKeyValue:error:</option>
+		
+		<option value="//api/name/updateKeyValueList:primaryKeyValueList:error:">- updateKeyValueList:primaryKeyValueList:error:</option>
+		
+		<option value="//api/name/updateKeyValueList:whereCondition:whereConditionParams:error:">- updateKeyValueList:whereCondition:whereConditionParams:error:</option>
+		
+		<option value="//api/name/updateRecord:error:">- updateRecord:error:</option>
+		
+		<option value="//api/name/updateRecordList:error:">- updateRecordList:error:</option>
+		
+		<option value="//api/name/updateValue:forKey:primaryKeyValue:error:">- updateValue:forKey:primaryKeyValue:error:</option>
+		
+		<option value="//api/name/updateValue:forKey:primaryKeyValueList:error:">- updateValue:forKey:primaryKeyValueList:error:</option>
+		
+		<option value="//api/name/updateValue:forKey:whereCondition:whereConditionParams:error:">- updateValue:forKey:whereCondition:whereConditionParams:error:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">CTPersistanceTable Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>CTPersistanceTable.h<br />CTPersistanceTable.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>CTPersistanceTable is used to operate records.</p>
+
+<p>You should create your own table object for every table in data base which must extends from CTPersitanceTable and must confirms to <a href="../Protocols/CTPersistanceTableProtocol.html">CTPersistanceTableProtocol</a></p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/initWithQueryCommand:" title="initWithQueryCommand:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithQueryCommand:">&ndash;&nbsp;initWithQueryCommand:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>create tabel with <a href="../Classes/CTPersistanceQueryCommand.html">CTPersistanceQueryCommand</a>, you should not create any table with this method.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithQueryCommand:(CTPersistanceQueryCommand *)<em>queryCommand</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>queryCommand</code></th>
+						<td><p>the query command</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return instance of CTPersistanceTable</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>create tabel with <a href="../Classes/CTPersistanceQueryCommand.html">CTPersistanceQueryCommand</a>, you should not create any table with this method.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/child" title="child"></a>
+	<h3 class="method-title"><code><a href="#//api/name/child">&nbsp;&nbsp;child</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>the child is just the same as self. just to make sure your own CTPersistance table is confirm to <a href="../Protocols/CTPersistanceTableProtocol.html">CTPersistanceTableProtocol</a></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak, readonly) CTPersistanceTable&lt;CTPersistanceTableProtocol&gt; *child</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>the child is just the same as self. just to make sure your own CTPersistance table is confirm to <a href="../Protocols/CTPersistanceTableProtocol.html">CTPersistanceTableProtocol</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/queryCommand" title="queryCommand"></a>
+	<h3 class="method-title"><code><a href="#//api/name/queryCommand">&nbsp;&nbsp;queryCommand</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>query command for you for debug.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) CTPersistanceQueryCommand *queryCommand</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>query command for you for debug.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/CTPersistanceQueryCommand.html">CTPersistanceQueryCommand</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Find Methods" name="task_Find Methods"></a>
+						<h2 class="task-title">Find Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/findLatestRecordWithError:" title="findLatestRecordWithError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/findLatestRecordWithError:">&ndash;&nbsp;findLatestRecordWithError:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>find the latest record</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSObject&lt;CTPersistanceRecordProtocol&gt; *)findLatestRecordWithError:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error if find fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return the latest record.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>find the latest record</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Find.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/findAllWithWhereCondition:conditionParams:isDistinct:error:" title="findAllWithWhereCondition:conditionParams:isDistinct:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/findAllWithWhereCondition:conditionParams:isDistinct:error:">&ndash;&nbsp;findAllWithWhereCondition:conditionParams:isDistinct:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>find all record with where condition. @see - (void)deleteWithWhereCondition:(NSString <em>)whereCondition conditionParams:(NSDictionary </em>)conditionParams error:(NSError **)error: for how to use where condition.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray&lt;NSObject&lt;CTPersistanceRecordProtocol&gt; *&gt; *)findAllWithWhereCondition:(NSString *)<em>condition</em> conditionParams:(NSDictionary *)<em>conditionParams</em> isDistinct:(BOOL)<em>isDistinct</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>condition</code></th>
+						<td><p>the where condition</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>conditionParams</code></th>
+						<td><p>the params to bind into where condition</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>isDistinct</code></th>
+						<td><p>if YES, will use &lsquo;SELECT DISTINCT&rsquo; clause.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error if fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return the record list.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>find all record with where condition. @see - (void)deleteWithWhereCondition:(NSString <em>)whereCondition conditionParams:(NSDictionary </em>)conditionParams error:(NSError **)error: for how to use where condition.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Find.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/findAllWithSQL:params:error:" title="findAllWithSQL:params:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/findAllWithSQL:params:error:">&ndash;&nbsp;findAllWithSQL:params:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>find all record with sql string. sqlString can be bind with params like where condition. @see - (void)deleteWithWhereCondition:(NSString <em>)whereCondition conditionParams:(NSDictionary </em>)conditionParams error:(NSError **)error: for how to use where condition.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray&lt;NSObject&lt;CTPersistanceRecordProtocol&gt; *&gt; *)findAllWithSQL:(NSString *)<em>sqlString</em> params:(NSDictionary *)<em>params</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>sqlString</code></th>
+						<td><p>the sqlString for finding all records</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>params</code></th>
+						<td><p>the params to be bind into sqlString</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error if fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return the record list</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>find all record with sql string. sqlString can be bind with params like where condition. @see - (void)deleteWithWhereCondition:(NSString <em>)whereCondition conditionParams:(NSDictionary </em>)conditionParams error:(NSError **)error: for how to use where condition.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Find.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/findAllWithCriteria:error:" title="findAllWithCriteria:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/findAllWithCriteria:error:">&ndash;&nbsp;findAllWithCriteria:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>find all record with criteria.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray&lt;NSObject&lt;CTPersistanceRecordProtocol&gt; *&gt; *)findAllWithCriteria:(CTPersistanceCriteria *)<em>criteria</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>criteria</code></th>
+						<td><p>criteria to find records</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error if fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return the record list</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>find all record with criteria.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/CTPersistanceCriteria.html">CTPersistanceCriteria</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Find.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/findFirstRowWithWhereCondition:conditionParams:isDistinct:error:" title="findFirstRowWithWhereCondition:conditionParams:isDistinct:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/findFirstRowWithWhereCondition:conditionParams:isDistinct:error:">&ndash;&nbsp;findFirstRowWithWhereCondition:conditionParams:isDistinct:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>find first row in record list with where condition.  @see - (void)deleteWithWhereCondition:(NSString <em>)whereCondition conditionParams:(NSDictionary </em>)conditionParams error:(NSError **)error: for how to use where condition. First row means the first record of fetched record list, not the first record in table.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSObject&lt;CTPersistanceRecordProtocol&gt; *)findFirstRowWithWhereCondition:(NSString *)<em>condition</em> conditionParams:(NSDictionary *)<em>conditionParams</em> isDistinct:(BOOL)<em>isDistinct</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>condition</code></th>
+						<td><p>condition used in WHERE clause</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>conditionParams</code></th>
+						<td><p>params to bind into whereCondition</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>isDistinct</code></th>
+						<td><p>if YES, will use &lsquo;SELECT DISTINCT&rsquo; clause</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error if fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return a record</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>find first row in record list with where condition.  @see - (void)deleteWithWhereCondition:(NSString <em>)whereCondition conditionParams:(NSDictionary </em>)conditionParams error:(NSError **)error: for how to use where condition. First row means the first record of fetched record list, not the first record in table.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Find.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/findFirstRowWithSQL:params:error:" title="findFirstRowWithSQL:params:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/findFirstRowWithSQL:params:error:">&ndash;&nbsp;findFirstRowWithSQL:params:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>find first record with sqlString. sqlString can be bind with params like where condition. @see - (void)deleteWithWhereCondition:(NSString <em>)whereCondition conditionParams:(NSDictionary </em>)conditionParams error:(NSError **)error: for how to use where condition.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSObject&lt;CTPersistanceRecordProtocol&gt; *)findFirstRowWithSQL:(NSString *)<em>sqlString</em> params:(NSDictionary *)<em>params</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>sqlString</code></th>
+						<td><p>the sqlString to find</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>params</code></th>
+						<td><p>the params to bind into sqlString</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error if fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return the first row.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>find first record with sqlString. sqlString can be bind with params like where condition. @see - (void)deleteWithWhereCondition:(NSString <em>)whereCondition conditionParams:(NSDictionary </em>)conditionParams error:(NSError **)error: for how to use where condition.</p>
+
+<p>First row means the first record of fetched record list, not the first record in table.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Find.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/findFirstRowWithCriteria:error:" title="findFirstRowWithCriteria:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/findFirstRowWithCriteria:error:">&ndash;&nbsp;findFirstRowWithCriteria:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>find first row with criteria.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSObject&lt;CTPersistanceRecordProtocol&gt; *)findFirstRowWithCriteria:(CTPersistanceCriteria *)<em>criteria</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>criteria</code></th>
+						<td><p>criteria to find records</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error if fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return the first row</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>find first row with criteria.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/CTPersistanceCriteria.html">CTPersistanceCriteria</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Find.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/countWithWhereCondition:conditionParams:isDistinct:error:" title="countWithWhereCondition:conditionParams:isDistinct:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/countWithWhereCondition:conditionParams:isDistinct:error:">&ndash;&nbsp;countWithWhereCondition:conditionParams:isDistinct:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>record count of record list with matches where condition. @see <a href="#//api/name/deleteWithWhereCondition:conditionParams:error:">deleteWithWhereCondition:conditionParams:error:</a> for how to use where condition.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSNumber *)countWithWhereCondition:(NSString *)<em>whereCondition</em> conditionParams:(NSDictionary *)<em>conditionParams</em> isDistinct:(BOOL)<em>isDistinct</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>whereCondition</code></th>
+						<td><p>condition used in WHERE clause</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>conditionParams</code></th>
+						<td><p>params ro bind into whereCondition</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>isDistinct</code></th>
+						<td><p>if YES, will use &lsquo;SELECT DISTINCT&rsquo; clause</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error if fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return record count of record list with matches where condition.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>record count of record list with matches where condition. @see <a href="#//api/name/deleteWithWhereCondition:conditionParams:error:">deleteWithWhereCondition:conditionParams:error:</a> for how to use where condition.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Find.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/countWithSQL:params:error:" title="countWithSQL:params:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/countWithSQL:params:error:">&ndash;&nbsp;countWithSQL:params:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>return count of record list by SQL. sqlString can be bind with params like where condition. @see <a href="#//api/name/deleteWithWhereCondition:conditionParams:error:">deleteWithWhereCondition:conditionParams:error:</a> for how to use where condition.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSNumber *)countWithSQL:(NSString *)<em>sqlString</em> params:(NSDictionary *)<em>params</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>sqlString</code></th>
+						<td><p>the sqlString to count</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>params</code></th>
+						<td><p>the params to bind into sqlString</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error if fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return count of record list by SQL.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>return count of record list by SQL. sqlString can be bind with params like where condition. @see <a href="#//api/name/deleteWithWhereCondition:conditionParams:error:">deleteWithWhereCondition:conditionParams:error:</a> for how to use where condition.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Find.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/countWithCriteria:error:" title="countWithCriteria:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/countWithCriteria:error:">&ndash;&nbsp;countWithCriteria:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>return count of records matches to criteria.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSNumber *)countWithCriteria:(CTPersistanceCriteria *)<em>criteria</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>criteria</code></th>
+						<td><p>criteria to count</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error if fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return count of records matches to criteria.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>return count of records matches to criteria.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/CTPersistanceCriteria.html">CTPersistanceCriteria</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Find.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/findWithPrimaryKey:error:" title="findWithPrimaryKey:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/findWithPrimaryKey:error:">&ndash;&nbsp;findWithPrimaryKey:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>find a record with primary key.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSObject&lt;CTPersistanceRecordProtocol&gt; *)findWithPrimaryKey:(NSNumber *)<em>primaryKeyValue</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>primaryKeyValue</code></th>
+						<td><p>the primary key of the record you want to find</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error if fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return a record</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>find a record with primary key.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Find.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/findAllWithPrimaryKey:error:" title="findAllWithPrimaryKey:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/findAllWithPrimaryKey:error:">&ndash;&nbsp;findAllWithPrimaryKey:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>find all records by primary key list</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray&lt;NSObject&lt;CTPersistanceRecordProtocol&gt; *&gt; *)findAllWithPrimaryKey:(NSArray&lt;NSNumber*&gt; *)<em>primaryKeyValueList</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>primaryKeyValueList</code></th>
+						<td><p>list of primary keys to find</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error if fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return a list of record</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>find all records by primary key list</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Find.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Update Methods" name="task_Update Methods"></a>
+						<h2 class="task-title">Update Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/updateRecord:error:" title="updateRecord:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateRecord:error:">&ndash;&nbsp;updateRecord:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>update a record</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateRecord:(NSObject&lt;CTPersistanceRecordProtocol&gt; *)<em>record</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>record</code></th>
+						<td><p>the record you want to update</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error if fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>update a record</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Update.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateRecordList:error:" title="updateRecordList:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateRecordList:error:">&ndash;&nbsp;updateRecordList:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>udpate a list of record</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateRecordList:(NSArray&lt;NSObject&lt;CTPersistanceRecordProtocol&gt; *&gt; *)<em>recordList</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>recordList</code></th>
+						<td><p>the list of record to update</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error if fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>udpate a list of record</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Update.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateValue:forKey:whereCondition:whereConditionParams:error:" title="updateValue:forKey:whereCondition:whereConditionParams:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateValue:forKey:whereCondition:whereConditionParams:error:">&ndash;&nbsp;updateValue:forKey:whereCondition:whereConditionParams:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>update value for key which the row matches whereCondition, @see <a href="#//api/name/deleteWithWhereCondition:conditionParams:error:">deleteWithWhereCondition:conditionParams:error:</a></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateValue:(id)<em>value</em> forKey:(NSString *)<em>key</em> whereCondition:(NSString *)<em>whereCondition</em> whereConditionParams:(NSDictionary *)<em>whereConditionParams</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>value</code></th>
+						<td><p>the value to update</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>the key of the column to update</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>whereCondition</code></th>
+						<td><p>where condition</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>whereConditionParams</code></th>
+						<td><p>params for where condition</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error if fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>update value for key which the row matches whereCondition, @see <a href="#//api/name/deleteWithWhereCondition:conditionParams:error:">deleteWithWhereCondition:conditionParams:error:</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Update.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateKeyValueList:whereCondition:whereConditionParams:error:" title="updateKeyValueList:whereCondition:whereConditionParams:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateKeyValueList:whereCondition:whereConditionParams:error:">&ndash;&nbsp;updateKeyValueList:whereCondition:whereConditionParams:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>update keys and values of rows matches whereCondition, @see <a href="#//api/name/deleteWithWhereCondition:conditionParams:error:">deleteWithWhereCondition:conditionParams:error:</a></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateKeyValueList:(NSDictionary *)<em>keyValueList</em> whereCondition:(NSString *)<em>whereCondition</em> whereConditionParams:(NSDictionary *)<em>whereConditionParams</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyValueList</code></th>
+						<td><p>key-values to update</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>whereCondition</code></th>
+						<td><p>where contidition</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>whereConditionParams</code></th>
+						<td><p>params for where condition</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error if fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>update keys and values of rows matches whereCondition, @see <a href="#//api/name/deleteWithWhereCondition:conditionParams:error:">deleteWithWhereCondition:conditionParams:error:</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Update.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateValue:forKey:primaryKeyValue:error:" title="updateValue:forKey:primaryKeyValue:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateValue:forKey:primaryKeyValue:error:">&ndash;&nbsp;updateValue:forKey:primaryKeyValue:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>update value for key by primary key</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateValue:(id)<em>value</em> forKey:(NSString *)<em>key</em> primaryKeyValue:(NSNumber *)<em>primaryKeyValue</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>value</code></th>
+						<td><p>value to update</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>key to update</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>primaryKeyValue</code></th>
+						<td><p>primary key of the record you want to update</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error if fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>update value for key by primary key</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Update.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateValue:forKey:primaryKeyValueList:error:" title="updateValue:forKey:primaryKeyValueList:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateValue:forKey:primaryKeyValueList:error:">&ndash;&nbsp;updateValue:forKey:primaryKeyValueList:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>update value for key by primary list</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateValue:(id)<em>value</em> forKey:(NSString *)<em>key</em> primaryKeyValueList:(NSArray&lt;NSNumber*&gt; *)<em>primaryKeyValueList</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>value</code></th>
+						<td><p>value to update</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>key to update</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>primaryKeyValueList</code></th>
+						<td><p>the list of primary key</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error if fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>update value for key by primary list</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Update.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateKeyValueList:primaryKeyValue:error:" title="updateKeyValueList:primaryKeyValue:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateKeyValueList:primaryKeyValue:error:">&ndash;&nbsp;updateKeyValueList:primaryKeyValue:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>update key-value list by primary key of the record you want to update</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateKeyValueList:(NSDictionary *)<em>keyValueList</em> primaryKeyValue:(NSNumber *)<em>primaryKeyValue</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyValueList</code></th>
+						<td><p>key-value list to update</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>primaryKeyValue</code></th>
+						<td><p>the primary key of the record you want to update</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error if fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>update key-value list by primary key of the record you want to update</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Update.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateKeyValueList:primaryKeyValueList:error:" title="updateKeyValueList:primaryKeyValueList:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateKeyValueList:primaryKeyValueList:error:">&ndash;&nbsp;updateKeyValueList:primaryKeyValueList:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>update key-value list by primary key list of the record you want to update</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateKeyValueList:(NSDictionary *)<em>keyValueList</em> primaryKeyValueList:(NSArray&lt;NSNumber*&gt; *)<em>primaryKeyValueList</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyValueList</code></th>
+						<td><p>key-value list to update</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>primaryKeyValueList</code></th>
+						<td><p>the primary key list of records you want to update</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error if fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>update key-value list by primary key list of the record you want to update</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Update.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Delete Methods" name="task_Delete Methods"></a>
+						<h2 class="task-title">Delete Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/deleteRecord:error:" title="deleteRecord:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteRecord:error:">&ndash;&nbsp;deleteRecord:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>delete a record.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)deleteRecord:(NSObject&lt;CTPersistanceRecordProtocol&gt; *)<em>record</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>record</code></th>
+						<td><p>the record you want to delete</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>the error if delete fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>delete a record.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Delete.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteRecordList:error:" title="deleteRecordList:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteRecordList:error:">&ndash;&nbsp;deleteRecordList:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>delete a list of record</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)deleteRecordList:(NSArray&lt;NSObject&lt;CTPersistanceRecordProtocol&gt; *&gt; *)<em>recordList</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>recordList</code></th>
+						<td><p>the record list you want to delete</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>the error if delete fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>delete a list of record</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Delete.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteWithWhereCondition:conditionParams:error:" title="deleteWithWhereCondition:conditionParams:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteWithWhereCondition:conditionParams:error:">&ndash;&nbsp;deleteWithWhereCondition:conditionParams:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>delete with condition. The &ldquo;where condition&rdquo; is a string which will be used in SQL WHERE clause. Can bind params if you have words start with colon.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)deleteWithWhereCondition:(NSString *)<em>whereCondition</em> conditionParams:(NSDictionary *)<em>conditionParams</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>whereCondition</code></th>
+						<td><p>the string for WHERE clause</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>conditionParams</code></th>
+						<td><p>the params to bind in to where condition</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>the error if delete fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>delete with condition. The &ldquo;where condition&rdquo; is a string which will be used in SQL WHERE clause. Can bind params if you have words start with colon.</p>
+
+<p>Example for whereCondition and conditionParams:</p>
+
+<p>NSString *whereCondition = @&ldquo;hello = :something&rdquo;; // the key in string must start wich colon</p>
+
+<p>NSDictionary *conditionParams = @{</p>
+
+<p>@&ldquo;something&rdquo;:@&ldquo;world&rdquo;</p>
+
+<p>};// the where string will be &ldquo;hello = world&rdquo;</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Delete.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteWithCriteria:error:" title="deleteWithCriteria:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteWithCriteria:error:">&ndash;&nbsp;deleteWithCriteria:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>delete with criteria</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)deleteWithCriteria:(CTPersistanceCriteria *)<em>criteria</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>criteria</code></th>
+						<td><p>the criteria for delete</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>the error if delete fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>delete with criteria</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/CTPersistanceCriteria.html">CTPersistanceCriteria</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Delete.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteWithSql:params:error:" title="deleteWithSql:params:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteWithSql:params:error:">&ndash;&nbsp;deleteWithSql:params:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>delete with SQL string</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)deleteWithSql:(NSString *)<em>sqlString</em> params:(NSDictionary *)<em>params</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>sqlString</code></th>
+						<td><p>the sqlString can be used as same as whereCondition to bind params, @see <a href="#//api/name/deleteWithWhereCondition:conditionParams:error:">deleteWithWhereCondition:conditionParams:error:</a></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>params</code></th>
+						<td><p>the params to bind into sqlString</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>the error if delete fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>delete with SQL string</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Delete.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteWithPrimaryKey:error:" title="deleteWithPrimaryKey:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteWithPrimaryKey:error:">&ndash;&nbsp;deleteWithPrimaryKey:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>delete with parimary key</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)deleteWithPrimaryKey:(NSNumber *)<em>primaryKeyValue</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>primaryKeyValue</code></th>
+						<td><p>the primary key of record to be deleted</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>the error if delete fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>delete with parimary key</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Delete.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deleteWithPrimaryKeyList:error:" title="deleteWithPrimaryKeyList:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteWithPrimaryKeyList:error:">&ndash;&nbsp;deleteWithPrimaryKeyList:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>delete a list record by primary key list.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)deleteWithPrimaryKeyList:(NSArray&lt;NSNumber*&gt; *)<em>primaryKeyValueList</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>primaryKeyValueList</code></th>
+						<td><p>the primary key list</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>the error if delete fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>delete a list record by primary key list.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Delete.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Insert Methods" name="task_Insert Methods"></a>
+						<h2 class="task-title">Insert Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/insertRecordList:error:" title="insertRecordList:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/insertRecordList:error:">&ndash;&nbsp;insertRecordList:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>insert a list of record</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSNumber *)insertRecordList:(NSArray&lt;NSObject&lt;CTPersistanceRecordProtocol&gt; *&gt; *)<em>recordList</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>recordList</code></th>
+						<td><p>the list of record to insert</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error if fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return the last insert row primary key</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>insert a list of record</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Insert.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/insertRecord:error:" title="insertRecord:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/insertRecord:error:">&ndash;&nbsp;insertRecord:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>insert a record</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSObject&lt;CTPersistanceRecordProtocol&gt; *)insertRecord:(NSObject&lt;CTPersistanceRecordProtocol&gt; *)<em>record</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>record</code></th>
+						<td><p>the record to insert</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error if fails</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return the primary key</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>insert a record</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceTable+Insert.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 CasaTaloyum. All rights reserved. Updated: 2015-10-10</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

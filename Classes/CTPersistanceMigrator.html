@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>CTPersistanceMigrator Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">CTPersistance </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">CasaTaloyum</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/createVersionTableWithDatabase:">- createVersionTableWithDatabase:</option>
+		
+		<option value="//api/name/databasePerformMigrate:">- databasePerformMigrate:</option>
+		
+		<option value="//api/name/databaseShouldMigrate:">- databaseShouldMigrate:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">CTPersistanceMigrator Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>CTPersistanceMigrator.h<br />CTPersistanceMigrator.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>You should create your own migrator object which must extend from CTPersistanceMigrator and confirms to this <a href="../Protocols/CTPersistanceMigratorProtocol.html">CTPersistanceMigratorProtocol</a>, or migration won&rsquo;t work.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/databaseShouldMigrate:" title="databaseShouldMigrate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/databaseShouldMigrate:">&ndash;&nbsp;databaseShouldMigrate:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>return whether should perform migration.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)databaseShouldMigrate:(CTPersistanceDataBase *)<em>database</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>database</code></th>
+						<td><p><a href="../Classes/CTPersistanceDataBase.html">CTPersistanceDataBase</a> instance</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return YES for &lsquo;should perform migration&rsquo;, NO for &lsquo;don&rsquo;t perform migration&rsquo;</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>return whether should perform migration.</p>
+
+<p>You should never call this method.</p><div class="warning"><p><strong>Warning:</strong> you should never call this method</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceMigrator.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/databasePerformMigrate:" title="databasePerformMigrate:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/databasePerformMigrate:">&ndash;&nbsp;databasePerformMigrate:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>perform migration steps</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)databasePerformMigrate:(CTPersistanceDataBase *)<em>database</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>database</code></th>
+						<td><p><a href="../Classes/CTPersistanceDataBase.html">CTPersistanceDataBase</a> instance</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>perform migration steps</p>
+
+<p>You should never call this method.</p><div class="warning"><p><strong>Warning:</strong> you should never call this method</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceMigrator.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/createVersionTableWithDatabase:" title="createVersionTableWithDatabase:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createVersionTableWithDatabase:">&ndash;&nbsp;createVersionTableWithDatabase:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>create version table with <a href="#//api/name/database">database</a> if version table not exists</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)createVersionTableWithDatabase:(CTPersistanceDataBase *)<em>database</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>database</code></th>
+						<td><p><a href="../Classes/CTPersistanceDataBase.html">CTPersistanceDataBase</a> instance</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>create version table with <a href="#//api/name/database">database</a> if version table not exists</p>
+
+<p>You should never call this method.</p><div class="warning"><p><strong>Warning:</strong> you should never call this method</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceMigrator.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 CasaTaloyum. All rights reserved. Updated: 2015-10-10</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
