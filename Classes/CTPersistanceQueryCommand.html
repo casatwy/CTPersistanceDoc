@@ -94,6 +94,8 @@
 		
 		<option value="//api/name/insertTable:withDataList:">- insertTable:withDataList:</option>
 		
+		<option value="//api/name/lastInsertRowId">- lastInsertRowId</option>
+		
 		<option value="//api/name/limit:">- limit:</option>
 		
 		<option value="//api/name/limit:offset:">- limit:offset:</option>
@@ -445,7 +447,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (NSNumber *)executeWithError:(NSError **)<em>error</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (BOOL)executeWithError:(NSError **)<em>error</em></code></div>
 
 		    
 			
@@ -465,7 +467,7 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>return last insert row id</p>
+				<p>return execute result</p>
 			</div>
 			
 
@@ -621,13 +623,13 @@
 						</div>
 						
 
-						<a title="DataManipulations Methods" name="task_DataManipulations Methods"></a>
-						<h2 class="task-title">DataManipulations Methods</h2>
+						<a title="Status Methods" name="task_Status Methods"></a>
+						<h2 class="task-title">Status Methods</h2>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/insertTable:withDataList:" title="insertTable:withDataList:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/insertTable:withDataList:">&ndash;&nbsp;insertTable:withDataList:</a></code>
+	<a name="//api/name/lastInsertRowId" title="lastInsertRowId"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lastInsertRowId">&ndash;&nbsp;lastInsertRowId</a></code>
 </h3>
 
 	<div class="method-info">
@@ -637,12 +639,71 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>insert table with table name and data list</p>
+				<p>return last insert row id</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)insertTable:(NSString *)<em>tableName</em> withDataList:(NSArray *)<em>dataList</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (NSNumber *)lastInsertRowId</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return last insert row id</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>return last insert row id</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceQueryCommand+Status.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="SchemaManipulations Methods" name="task_SchemaManipulations Methods"></a>
+						<h2 class="task-title">SchemaManipulations Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/createTable:columnInfo:" title="createTable:columnInfo:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createTable:columnInfo:">&ndash;&nbsp;createTable:columnInfo:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>create table with column information</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)createTable:(NSString *)<em>tableName</em> columnInfo:(NSDictionary *)<em>columnInfo</em></code></div>
 
 		    
 			
@@ -652,12 +713,12 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>tableName</code></th>
-						<td><p>table name</p></td>
+						<td><p>name of table</p></td>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>dataList</code></th>
-						<td><p>data list to insert</p></td>
+						<th scope="row" class="argument-name"><code>columnInfo</code></th>
+						<td><p>colomn information of table</p></td>
 					</tr>
 				
 				</table>
@@ -676,9 +737,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>insert table with table name and data list</p>
-
-<p>You should never use this method directly, use insert methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead</p><div class="warning"><p><strong>Warning:</strong> You should never use this method directly, use insert methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead</p></div>
+				<p>create table with column information</p>
 			</div>
 			
 
@@ -689,15 +748,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">CTPersistanceQueryCommand+DataManipulations.h</code></p>
+				<p><code class="declared-in-ref">CTPersistanceQueryCommand+SchemaManipulations.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/updateTable:withData:condition:conditionParams:" title="updateTable:withData:condition:conditionParams:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/updateTable:withData:condition:conditionParams:">&ndash;&nbsp;updateTable:withData:condition:conditionParams:</a></code>
+	<a name="//api/name/dropTable:" title="dropTable:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dropTable:">&ndash;&nbsp;dropTable:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -707,12 +766,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>update table with data and condition with condition params.</p>
+				<p>drop table with table name</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)updateTable:(NSString *)<em>tableName</em> withData:(NSDictionary *)<em>data</em> condition:(NSString *)<em>condition</em> conditionParams:(NSDictionary *)<em>conditionParams</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)dropTable:(NSString *)<em>tableName</em></code></div>
 
 		    
 			
@@ -722,17 +781,158 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>tableName</code></th>
+						<td><p>name of table</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return CTPersistanceQueryCommnad</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>drop table with table name</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceQueryCommand+SchemaManipulations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addColumn:columnInfo:tableName:" title="addColumn:columnInfo:tableName:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addColumn:columnInfo:tableName:">&ndash;&nbsp;addColumn:columnInfo:tableName:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>add column with column name and column infomation and name of table</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)addColumn:(NSString *)<em>columnName</em> columnInfo:(NSString *)<em>columnInfo</em> tableName:(NSString *)<em>tableName</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>columnName</code></th>
+						<td><p>column name</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>columnInfo</code></th>
+						<td><p>column infomation</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tableName</code></th>
+						<td><p>name of table</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return CTPersistanceQueryCommnad</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>add column with column name and column infomation and name of table</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceQueryCommand+SchemaManipulations.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/createIndex:tableName:indexedColumnList:condition:conditionParams:isUnique:" title="createIndex:tableName:indexedColumnList:condition:conditionParams:isUnique:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createIndex:tableName:indexedColumnList:condition:conditionParams:isUnique:">&ndash;&nbsp;createIndex:tableName:indexedColumnList:condition:conditionParams:isUnique:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>create Index for table with indexed column list and condition with condition params.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)createIndex:(NSString *)<em>indexName</em> tableName:(NSString *)<em>tableName</em> indexedColumnList:(NSArray *)<em>indexedColumnList</em> condition:(NSString *)<em>condition</em> conditionParams:(NSDictionary *)<em>conditionParams</em> isUnique:(BOOL)<em>isUnique</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>indexName</code></th>
+						<td><p>index name</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tableName</code></th>
 						<td><p>table name</p></td>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>data</code></th>
-						<td><p>data list to update</p></td>
+						<th scope="row" class="argument-name"><code>indexedColumnList</code></th>
+						<td><p>indexed column list</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>condition</code></th>
-						<td><p>conditon</p></td>
+						<td><p>condition</p></td>
 					</tr>
 				
 					<tr>
@@ -740,6 +940,11 @@
 						<td><p>params for condition</p></td>
 					</tr>
 				
+					<tr>
+						<th scope="row" class="argument-name"><code>isUnique</code></th>
+						<td><p>if YES, create UNIQUE index</p></td>
+					</tr>
+				
 				</table>
 			</div>
 			
@@ -747,7 +952,7 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>return CTPersistanceQueryCommand</p>
+				<p>return CTPerisistanceQueryCommand</p>
 			</div>
 			
 
@@ -756,9 +961,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>update table with data and condition with condition params.</p>
-
-<p>You should never use this method directly, use update methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead</p><div class="warning"><p><strong>Warning:</strong> You should never use this method directly, use insert methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead</p></div>
+				<p>create Index for table with indexed column list and condition with condition params.</p>
 			</div>
 			
 
@@ -769,15 +972,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">CTPersistanceQueryCommand+DataManipulations.h</code></p>
+				<p><code class="declared-in-ref">CTPersistanceQueryCommand+SchemaManipulations.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/deleteTable:withCondition:conditionParams:" title="deleteTable:withCondition:conditionParams:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/deleteTable:withCondition:conditionParams:">&ndash;&nbsp;deleteTable:withCondition:conditionParams:</a></code>
+	<a name="//api/name/dropIndex:" title="dropIndex:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dropIndex:">&ndash;&nbsp;dropIndex:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -787,12 +990,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>delete table with table name and condition with conditition params</p>
+				<p>drop index with index name</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)deleteTable:(NSString *)<em>tableName</em> withCondition:(NSString *)<em>condition</em> conditionParams:(NSDictionary *)<em>conditionParams</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)dropIndex:(NSString *)<em>indexName</em></code></div>
 
 		    
 			
@@ -801,18 +1004,8 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>tableName</code></th>
-						<td><p>table name</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>condition</code></th>
-						<td><p>conditon</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>conditionParams</code></th>
-						<td><p>params for condition</p></td>
+						<th scope="row" class="argument-name"><code>indexName</code></th>
+						<td><p>index name</p></td>
 					</tr>
 				
 				</table>
@@ -822,7 +1015,7 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>return CTPersistanceQueryCommand</p>
+				<p>return CTPersisitanceQueryCommand</p>
 			</div>
 			
 
@@ -831,9 +1024,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>delete table with table name and condition with conditition params</p>
-
-<p>You should never use this method directly, use update methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead</p><div class="warning"><p><strong>Warning:</strong> You should never use this method directly, use insert methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead</p></div>
+				<p>drop index with index name</p>
 			</div>
 			
 
@@ -844,7 +1035,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">CTPersistanceQueryCommand+DataManipulations.h</code></p>
+				<p><code class="declared-in-ref">CTPersistanceQueryCommand+SchemaManipulations.h</code></p>
 			</div>
 			
 			
@@ -1337,13 +1528,13 @@
 						</div>
 						
 
-						<a title="SchemaManipulations Methods" name="task_SchemaManipulations Methods"></a>
-						<h2 class="task-title">SchemaManipulations Methods</h2>
+						<a title="DataManipulations Methods" name="task_DataManipulations Methods"></a>
+						<h2 class="task-title">DataManipulations Methods</h2>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/createTable:columnInfo:" title="createTable:columnInfo:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/createTable:columnInfo:">&ndash;&nbsp;createTable:columnInfo:</a></code>
+	<a name="//api/name/insertTable:withDataList:" title="insertTable:withDataList:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/insertTable:withDataList:">&ndash;&nbsp;insertTable:withDataList:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1353,12 +1544,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>create table with column information</p>
+				<p>insert table with table name and data list</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)createTable:(NSString *)<em>tableName</em> columnInfo:(NSDictionary *)<em>columnInfo</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)insertTable:(NSString *)<em>tableName</em> withDataList:(NSArray *)<em>dataList</em></code></div>
 
 		    
 			
@@ -1368,12 +1559,12 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>tableName</code></th>
-						<td><p>name of table</p></td>
+						<td><p>table name</p></td>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>columnInfo</code></th>
-						<td><p>colomn information of table</p></td>
+						<th scope="row" class="argument-name"><code>dataList</code></th>
+						<td><p>data list to insert</p></td>
 					</tr>
 				
 				</table>
@@ -1392,7 +1583,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>create table with column information</p>
+				<p>insert table with table name and data list</p>
+
+<p>You should never use this method directly, use insert methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead</p><div class="warning"><p><strong>Warning:</strong> You should never use this method directly, use insert methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead</p></div>
 			</div>
 			
 
@@ -1403,15 +1596,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">CTPersistanceQueryCommand+SchemaManipulations.h</code></p>
+				<p><code class="declared-in-ref">CTPersistanceQueryCommand+DataManipulations.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/dropTable:" title="dropTable:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/dropTable:">&ndash;&nbsp;dropTable:</a></code>
+	<a name="//api/name/updateTable:withData:condition:conditionParams:" title="updateTable:withData:condition:conditionParams:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateTable:withData:condition:conditionParams:">&ndash;&nbsp;updateTable:withData:condition:conditionParams:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1421,159 +1614,18 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>drop table with table name</p>
+				<p>update table with data and condition with condition params.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)dropTable:(NSString *)<em>tableName</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>tableName</code></th>
-						<td><p>name of table</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>return CTPersistanceQueryCommnad</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>drop table with table name</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">CTPersistanceQueryCommand+SchemaManipulations.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/addColumn:columnInfo:tableName:" title="addColumn:columnInfo:tableName:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/addColumn:columnInfo:tableName:">&ndash;&nbsp;addColumn:columnInfo:tableName:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>add column with column name and column infomation and name of table</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)addColumn:(NSString *)<em>columnName</em> columnInfo:(NSString *)<em>columnInfo</em> tableName:(NSString *)<em>tableName</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)updateTable:(NSString *)<em>tableName</em> withData:(NSDictionary *)<em>data</em> condition:(NSString *)<em>condition</em> conditionParams:(NSDictionary *)<em>conditionParams</em></code></div>
 
 		    
 			
 			<div class="method-subsection arguments-section parameters">
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>columnName</code></th>
-						<td><p>column name</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>columnInfo</code></th>
-						<td><p>column infomation</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>tableName</code></th>
-						<td><p>name of table</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>return CTPersistanceQueryCommnad</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>add column with column name and column infomation and name of table</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">CTPersistanceQueryCommand+SchemaManipulations.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/createIndex:tableName:indexedColumnList:condition:conditionParams:isUnique:" title="createIndex:tableName:indexedColumnList:condition:conditionParams:isUnique:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/createIndex:tableName:indexedColumnList:condition:conditionParams:isUnique:">&ndash;&nbsp;createIndex:tableName:indexedColumnList:condition:conditionParams:isUnique:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>create Index for table with indexed column list and condition with condition params.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)createIndex:(NSString *)<em>indexName</em> tableName:(NSString *)<em>tableName</em> indexedColumnList:(NSArray *)<em>indexedColumnList</em> condition:(NSString *)<em>condition</em> conditionParams:(NSDictionary *)<em>conditionParams</em> isUnique:(BOOL)<em>isUnique</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>indexName</code></th>
-						<td><p>index name</p></td>
-					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>tableName</code></th>
@@ -1581,23 +1633,18 @@
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>indexedColumnList</code></th>
-						<td><p>indexed column list</p></td>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>data list to update</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>condition</code></th>
-						<td><p>condition</p></td>
+						<td><p>conditon</p></td>
 					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>conditionParams</code></th>
 						<td><p>params for condition</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>isUnique</code></th>
-						<td><p>if YES, create UNIQUE index</p></td>
 					</tr>
 				
 				</table>
@@ -1607,7 +1654,7 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>return CTPerisistanceQueryCommand</p>
+				<p>return CTPersistanceQueryCommand</p>
 			</div>
 			
 
@@ -1616,7 +1663,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>create Index for table with indexed column list and condition with condition params.</p>
+				<p>update table with data and condition with condition params.</p>
+
+<p>You should never use this method directly, use update methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead</p><div class="warning"><p><strong>Warning:</strong> You should never use this method directly, use insert methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead</p></div>
 			</div>
 			
 
@@ -1627,15 +1676,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">CTPersistanceQueryCommand+SchemaManipulations.h</code></p>
+				<p><code class="declared-in-ref">CTPersistanceQueryCommand+DataManipulations.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/dropIndex:" title="dropIndex:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/dropIndex:">&ndash;&nbsp;dropIndex:</a></code>
+	<a name="//api/name/deleteTable:withCondition:conditionParams:" title="deleteTable:withCondition:conditionParams:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deleteTable:withCondition:conditionParams:">&ndash;&nbsp;deleteTable:withCondition:conditionParams:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -1645,12 +1694,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>drop index with index name</p>
+				<p>delete table with table name and condition with conditition params</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)dropIndex:(NSString *)<em>indexName</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)deleteTable:(NSString *)<em>tableName</em> withCondition:(NSString *)<em>condition</em> conditionParams:(NSDictionary *)<em>conditionParams</em></code></div>
 
 		    
 			
@@ -1659,8 +1708,18 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>indexName</code></th>
-						<td><p>index name</p></td>
+						<th scope="row" class="argument-name"><code>tableName</code></th>
+						<td><p>table name</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>condition</code></th>
+						<td><p>conditon</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>conditionParams</code></th>
+						<td><p>params for condition</p></td>
 					</tr>
 				
 				</table>
@@ -1670,7 +1729,7 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>return CTPersisitanceQueryCommand</p>
+				<p>return CTPersistanceQueryCommand</p>
 			</div>
 			
 
@@ -1679,7 +1738,9 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>drop index with index name</p>
+				<p>delete table with table name and condition with conditition params</p>
+
+<p>You should never use this method directly, use update methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead</p><div class="warning"><p><strong>Warning:</strong> You should never use this method directly, use insert methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead</p></div>
 			</div>
 			
 
@@ -1690,7 +1751,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">CTPersistanceQueryCommand+SchemaManipulations.h</code></p>
+				<p><code class="declared-in-ref">CTPersistanceQueryCommand+DataManipulations.h</code></p>
 			</div>
 			
 			
@@ -1711,7 +1772,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 CasaTaloyum. All rights reserved. Updated: 2015-10-10</p>
+						<p class="copyright">Copyright &copy; 2015 CasaTaloyum. All rights reserved. Updated: 2015-10-13</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
