@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>CTPersistanceMigrationStep Protocol Reference</title>
+	<title>CTPersistanceTransaction Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -56,15 +56,13 @@
 	
 
 	
-
-	
-	<optgroup label="Instance Methods">
+	<optgroup label="Class Methods">
 		
-		<option value="//api/name/goDownWithQueryCommand:error:">- goDownWithQueryCommand:error:</option>
-		
-		<option value="//api/name/goUpWithQueryCommand:error:">- goUpWithQueryCommand:error:</option>
+		<option value="//api/name/performTranscationWithBlock:queryCommand:lockType:">+ performTranscationWithBlock:queryCommand:lockType:</option>
 		
 	</optgroup>
+	
+
 	
 	
 </select>
@@ -79,16 +77,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">CTPersistanceMigrationStep Protocol Reference</h1>
+					<h1 class="title">CTPersistanceTransaction Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<th>Conforms to</th>
+	<th>Inherits from</th>
 	<td>NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>CTPersistanceMigrator.h</td>
+	<td>CTPersistanceTransaction.h<br />CTPersistanceTransaction.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -98,7 +96,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>this protocol is used for Migration</p>
+						<p>a class to perform transaction.</p>
 					</div>
 					
 					
@@ -114,9 +112,9 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/goUpWithQueryCommand:error:" title="goUpWithQueryCommand:error:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/goUpWithQueryCommand:error:">&ndash;&nbsp;goUpWithQueryCommand:error:</a></code>
-<span class="task-item-suffix">required method</span></h3>
+	<a name="//api/name/performTranscationWithBlock:queryCommand:lockType:" title="performTranscationWithBlock:queryCommand:lockType:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/performTranscationWithBlock:queryCommand:lockType:">+&nbsp;performTranscationWithBlock:queryCommand:lockType:</a></code>
+</h3>
 
 	<div class="method-info">
 		<div class="pointy-thing"></div>
@@ -125,12 +123,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>go upper version</p>
+				<p>perform transaction</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)goUpWithQueryCommand:(CTPersistanceQueryCommand *)<em>queryCommand</em> error:(NSError **)<em>error</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (void)performTranscationWithBlock:(void ( ^ ) ( BOOL *shouldRollback ))<em>transactionBlock</em> queryCommand:(CTPersistanceQueryCommand *)<em>queryCommand</em> lockType:(CTPersistanceTransactionLockType)<em>lockType</em></code></div>
 
 		    
 			
@@ -139,13 +137,18 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
+						<th scope="row" class="argument-name"><code>transactionBlock</code></th>
+						<td><p>transaction block</p></td>
+					</tr>
+				
+					<tr>
 						<th scope="row" class="argument-name"><code>queryCommand</code></th>
 						<td><p><a href="../Classes/CTPersistanceQueryCommand.html">CTPersistanceQueryCommand</a> instance</p></td>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>error if fails</p></td>
+						<th scope="row" class="argument-name"><code>lockType</code></th>
+						<td><p>the lock type of transaction, use CTPersistanceTransactionLockTypeDefault if you are not sure which lock to use</p></td>
 					</tr>
 				
 				</table>
@@ -159,9 +162,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>go upper version</p>
-
-<p>You implement this method to make migration forward, if you set error is not nil, <a href="../Classes/CTPersistanceMigrator.html">CTPersistanceMigrator</a> will call goDownWithQueryCommand:</p>
+				<p>perform transaction</p>
 			</div>
 			
 
@@ -172,72 +173,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">CTPersistanceMigrator.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/goDownWithQueryCommand:error:" title="goDownWithQueryCommand:error:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/goDownWithQueryCommand:error:">&ndash;&nbsp;goDownWithQueryCommand:error:</a></code>
-<span class="task-item-suffix">required method</span></h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>go lower version</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)goDownWithQueryCommand:(CTPersistanceQueryCommand *)<em>queryCommand</em> error:(NSError **)<em>error</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>queryCommand</code></th>
-						<td><p><a href="../Classes/CTPersistanceQueryCommand.html">CTPersistanceQueryCommand</a> instance</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>error if fails</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>go lower version</p>
-
-<p><a href="../Classes/CTPersistanceMigrator.html">CTPersistanceMigrator</a> will call this method when goUpWithQueryCommand: fails</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">CTPersistanceMigrator.h</code></p>
+				<p><code class="declared-in-ref">CTPersistanceTransaction.h</code></p>
 			</div>
 			
 			

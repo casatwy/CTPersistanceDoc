@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>CTPersistanceErrorCode Constants Reference</title>
+	<title>CTPersistanceTransactionLockType Constants Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -59,13 +59,13 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">CTPersistanceErrorCode Constants Reference</h1>
+					<h1 class="title">CTPersistanceTransactionLockType Constants Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<th>Declared in</th>
-	<td>CTPersistanceConfiguration.h</td>
+	<td>CTPersistanceTransaction.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -75,11 +75,11 @@
 					
 
                     
-                    <h3 class="subsubtitle method-title">CTPersistanceErrorCode</h3>
+                    <h3 class="subsubtitle method-title">CTPersistanceTransactionLockType</h3>
                     
 					
 					<div class="section section-overview">
-                        <p>error code in CTPersistance</p>
+                        <p>specify the lock type when transaction begins.</p>
 					</div>
 					
 					
@@ -87,19 +87,15 @@
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSUInteger, CTPersistanceErrorCode ) {<br>
+                        <code>typedef NS_ENUM(NSUInteger, CTPersistanceTransactionLockType ) {<br>
                             
-                            &nbsp;&nbsp; <a href="">CTPersistanceErrorCodeOpenError</a>,<br>
+                            &nbsp;&nbsp; <a href="">CTPersistanceTransactionLockTypeDefault</a>,<br>
                             
-                            &nbsp;&nbsp; <a href="">CTPersistanceErrorCodeCreateError</a>,<br>
+                            &nbsp;&nbsp; <a href="">CTPersistanceTransactionLockTypeDeferred</a>,<br>
                             
-                            &nbsp;&nbsp; <a href="">CTPersistanceErrorCodeQueryStringError</a>,<br>
+                            &nbsp;&nbsp; <a href="">CTPersistanceTransactionLockTypeImmediate</a>,<br>
                             
-                            &nbsp;&nbsp; <a href="">CTPersistanceErrorCodeRecordNotAvailableToInsert</a>,<br>
-                            
-                            &nbsp;&nbsp; <a href="">CTPersistanceErrorCodeRecordNotAvailableToUpdate</a>,<br>
-                            
-                            &nbsp;&nbsp; <a href="">CTPersistanceErrorCodeFailedToSetKeyForValue</a>,<br>
+                            &nbsp;&nbsp; <a href="">CTPersistanceTransactionLockTypeExclusive</a>,<br>
                             
                             };</code>
                     
@@ -109,11 +105,11 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="CTPersistanceErrorCodeOpenError"></a><code>CTPersistanceErrorCodeOpenError</code></dt>
+                            <dt><a name="" title="CTPersistanceTransactionLockTypeDefault"></a><code>CTPersistanceTransactionLockTypeDefault</code></dt>
 <dd>
 
 
-<p>failed to open database file</p>
+<p>perform BEGIN DEFERRED TRANSACTION, which uses SHARED lock.</p>
 
 
 
@@ -121,16 +117,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">CTPersistanceConfiguration.h</code>.
+		Declared In <code class="declared-in-ref">CTPersistanceTransaction.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="CTPersistanceErrorCodeCreateError"></a><code>CTPersistanceErrorCodeCreateError</code></dt>
+                            <dt><a name="" title="CTPersistanceTransactionLockTypeDeferred"></a><code>CTPersistanceTransactionLockTypeDeferred</code></dt>
 <dd>
 
 
-<p>failed to create database file</p>
+<p>perform BEGIN DEFERRED TRANSACTION, which uses SHARED lock.</p>
 
 
 
@@ -138,16 +134,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">CTPersistanceConfiguration.h</code>.
+		Declared In <code class="declared-in-ref">CTPersistanceTransaction.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="CTPersistanceErrorCodeQueryStringError"></a><code>CTPersistanceErrorCodeQueryStringError</code></dt>
+                            <dt><a name="" title="CTPersistanceTransactionLockTypeImmediate"></a><code>CTPersistanceTransactionLockTypeImmediate</code></dt>
 <dd>
 
 
-<p>failed to execute SQL</p>
+<p>perform BEGIN IMMEDIATE TRANSACTION, which uses RESERVED lock.</p>
 
 
 
@@ -155,16 +151,16 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">CTPersistanceConfiguration.h</code>.
+		Declared In <code class="declared-in-ref">CTPersistanceTransaction.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="CTPersistanceErrorCodeRecordNotAvailableToInsert"></a><code>CTPersistanceErrorCodeRecordNotAvailableToInsert</code></dt>
+                            <dt><a name="" title="CTPersistanceTransactionLockTypeExclusive"></a><code>CTPersistanceTransactionLockTypeExclusive</code></dt>
 <dd>
 
 
-<p>record is not available to INSERT</p>
+<p>perform BEGIN EXCLUSIVE TRANSACTION, which uses EXCLUSIVE lock.</p>
 
 
 
@@ -172,41 +168,7 @@
 
     
 	<p>
-		Declared In <code class="declared-in-ref">CTPersistanceConfiguration.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="CTPersistanceErrorCodeRecordNotAvailableToUpdate"></a><code>CTPersistanceErrorCodeRecordNotAvailableToUpdate</code></dt>
-<dd>
-
-
-<p>record is not available to UPDATE</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">CTPersistanceConfiguration.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="CTPersistanceErrorCodeFailedToSetKeyForValue"></a><code>CTPersistanceErrorCodeFailedToSetKeyForValue</code></dt>
-<dd>
-
-
-<p>failed to set key for value in record</p>
-
-
-
-
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">CTPersistanceConfiguration.h</code>.
+		Declared In <code class="declared-in-ref">CTPersistanceTransaction.h</code>.
 	</p>
 	
 </dd>
@@ -223,7 +185,7 @@
                     
                     <div class="method-subsection declared-in-section">
                         <h4 class="method-subtitle">Declared In</h4>
-                        <p><code class="declared-in-ref">CTPersistanceConfiguration.h</code></p>
+                        <p><code class="declared-in-ref">CTPersistanceTransaction.h</code></p>
                     </div>
                     
                     
