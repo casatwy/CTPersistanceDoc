@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>NSString(ReqularExpression) Category Reference</title>
+	<title>CTPersistanceAsyncExecutor Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -56,11 +56,17 @@
 	
 
 	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/sharedInstance">+ sharedInstance</option>
+		
+	</optgroup>
+	
 
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/isMatchWithRegularExpression:">- isMatchWithRegularExpression:</option>
+		<option value="//api/name/performAsyncAction:shouldWaitUntilDone:">- performAsyncAction:shouldWaitUntilDone:</option>
 		
 	</optgroup>
 	
@@ -77,13 +83,16 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">NSString(ReqularExpression) Category Reference</h1>
+					<h1 class="title">CTPersistanceAsyncExecutor Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
 	<th>Declared in</th>
-	<td>NSString+ReqularExpression.h<br />NSString+ReqularExpression.m</td>
+	<td>CTPersistanceAsyncExecutor.h<br />CTPersistanceAsyncExecutor.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -93,7 +102,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>category for Regular Expression</p>
+						<p>aysnc action executor for multi-thread</p>
 					</div>
 					
 					
@@ -109,8 +118,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/isMatchWithRegularExpression:" title="isMatchWithRegularExpression:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/isMatchWithRegularExpression:">&ndash;&nbsp;isMatchWithRegularExpression:</a></code>
+	<a name="//api/name/sharedInstance" title="sharedInstance"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sharedInstance">+&nbsp;sharedInstance</a></code>
 </h3>
 
 	<div class="method-info">
@@ -120,32 +129,20 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>check whether the string is match to regularExpressionPattern with NSRegularExpress</p>
+				<p>you should always use shared instance to perform asynchronize action</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (BOOL)isMatchWithRegularExpression:(NSString *)<em>regularExpressionPattern</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (instancetype)sharedInstance</code></div>
 
 		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>regularExpressionPattern</code></th>
-						<td><p>regular express pattern</p></td>
-					</tr>
-				
-				</table>
-			</div>
 			
 
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>return YES if matches, NO if not.</p>
+				<p>return the shared instance</p>
 			</div>
 			
 
@@ -154,9 +151,7 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>check whether the string is match to regularExpressionPattern with NSRegularExpress</p>
-
-<p>the match option is NSRegularExpressionCaseInsensitive | NSRegularExpressionDotMatchesLineSeparators | NSRegularExpressionUseUnixLineSeparators | NSRegularExpressionAnchorsMatchLines</p>
+				<p>you should always use shared instance to perform asynchronize action</p>
 			</div>
 			
 
@@ -167,7 +162,72 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">NSString+ReqularExpression.h</code></p>
+				<p><code class="declared-in-ref">CTPersistanceAsyncExecutor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/performAsyncAction:shouldWaitUntilDone:" title="performAsyncAction:shouldWaitUntilDone:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/performAsyncAction:shouldWaitUntilDone:">&ndash;&nbsp;performAsyncAction:shouldWaitUntilDone:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>perform aync action.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)performAsyncAction:(void ( ^ ) ( void ))<em>action</em> shouldWaitUntilDone:(BOOL)<em>shouldWaitUntilDone</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>action</code></th>
+						<td><p>the action block to be performed</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>shouldWaitUntilDone</code></th>
+						<td><p>if YES, this method will not end until action block has finished.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>perform aync action.</p>
+
+<p>you must always create <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> in action block, do not use outside table instance in this block.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceAsyncExecutor.h</code></p>
 			</div>
 			
 			

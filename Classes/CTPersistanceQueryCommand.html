@@ -70,8 +70,6 @@
 		
 		<option value="//api/name/addColumn:columnInfo:tableName:">- addColumn:columnInfo:tableName:</option>
 		
-		<option value="//api/name/countWithError:">- countWithError:</option>
-		
 		<option value="//api/name/createIndex:tableName:indexedColumnList:condition:conditionParams:isUnique:">- createIndex:tableName:indexedColumnList:condition:conditionParams:isUnique:</option>
 		
 		<option value="//api/name/createTable:columnInfo:">- createTable:columnInfo:</option>
@@ -467,7 +465,7 @@
 			
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>return execute result</p>
+				<p>return NO if fails, and YES for success</p>
 			</div>
 			
 
@@ -551,552 +549,6 @@
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
 				<p><code class="declared-in-ref">CTPersistanceQueryCommand.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/countWithError:" title="countWithError:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/countWithError:">&ndash;&nbsp;countWithError:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>count data with <a href="#//api/name/sqlString">sqlString</a></p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (NSNumber *)countWithError:(NSError **)<em>error</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><p>error if fails</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>return count</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>count data with <a href="#//api/name/sqlString">sqlString</a></p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">CTPersistanceQueryCommand.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
-						
-
-						<a title="ReadMethods Methods" name="task_ReadMethods Methods"></a>
-						<h2 class="task-title">ReadMethods Methods</h2>
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/select:isDistinct:" title="select:isDistinct:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/select:isDistinct:">&ndash;&nbsp;select:isDistinct:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>create SELECT part of SQL.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)select:(NSString *)<em>columList</em> isDistinct:(BOOL)<em>isDistinct</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>columList</code></th>
-						<td><p>SELECT column list</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>isDistinct</code></th>
-						<td><p>if YES, will use SELECT DISTINCT when generating SQL</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>return CTPersistanceQueryCommand</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>create SELECT part of SQL.</p>
-
-<p>You should never use this method directly, use Find methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">CTPersistanceQueryCommand+ReadMethods.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/from:" title="from:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/from:">&ndash;&nbsp;from:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>create FROM part of SQL.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)from:(NSString *)<em>fromList</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>fromList</code></th>
-						<td><p>FROM part in SQL</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>return CTPersistanceQueryCommand</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>create FROM part of SQL.</p>
-
-<p>You should never use this method directly, use Find methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">CTPersistanceQueryCommand+ReadMethods.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/where:params:" title="where:params:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/where:params:">&ndash;&nbsp;where:params:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>create WHERE part of SQL.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)where:(NSString *)<em>condition</em> params:(NSDictionary *)<em>params</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>condition</code></th>
-						<td><p>where condition</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>params</code></th>
-						<td><p>params for where condition</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>return CTPersistanceQueryCommand</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>create WHERE part of SQL.</p>
-
-<p>You should never use this method directly, use Find methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead.</p><div class="warning"><p><strong>Warning:</strong> You should never use this method directly, use insert methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead</p></div>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">CTPersistanceQueryCommand+ReadMethods.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/orderBy:isDESC:" title="orderBy:isDESC:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/orderBy:isDESC:">&ndash;&nbsp;orderBy:isDESC:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>create ORDER BY part of SQL</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)orderBy:(NSString *)<em>orderBy</em> isDESC:(BOOL)<em>isDESC</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>orderBy</code></th>
-						<td><p>ORDER BY part of SQL</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>isDESC</code></th>
-						<td><p>if YES, use DESC, if NO, use ASC</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>return CTPersistanceQueryCommand</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>create ORDER BY part of SQL</p>
-
-<p>You should never use this method directly, use Find methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead.</p><div class="warning"><p><strong>Warning:</strong> You should never use this method directly, use insert methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead</p></div>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">CTPersistanceQueryCommand+ReadMethods.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/limit:" title="limit:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/limit:">&ndash;&nbsp;limit:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>create LIMIT part of SQL</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)limit:(NSInteger)<em>limit</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>limit</code></th>
-						<td><p>limit count</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>return CTPersistanceQueryCommand</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>create LIMIT part of SQL</p>
-
-<p>You should never use this method directly, use Find methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead.</p><div class="warning"><p><strong>Warning:</strong> You should never use this method directly, use insert methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead</p></div>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">CTPersistanceQueryCommand+ReadMethods.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/offset:" title="offset:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/offset:">&ndash;&nbsp;offset:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>create OFFSET part of SQL</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)offset:(NSInteger)<em>offset</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>offset</code></th>
-						<td><p>offset</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>return CTPersistanceQueryCommand</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>create OFFSET part of SQL</p>
-
-<p>You should never use this method directly, use Find methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead.</p><div class="warning"><p><strong>Warning:</strong> You should never use this method directly, use insert methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead</p></div>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">CTPersistanceQueryCommand+ReadMethods.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/limit:offset:" title="limit:offset:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/limit:offset:">&ndash;&nbsp;limit:offset:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Handy method to create LIMIT and OFFSET part of SQL</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)limit:(NSInteger)<em>limit</em> offset:(NSInteger)<em>offset</em></code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>limit</code></th>
-						<td><p>limit count</p></td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>offset</code></th>
-						<td><p>offset</p></td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-			<div class="method-subsection return">
-				<h4 class="method-subtitle parameter-title">Return Value</h4>
-				<p>return CTPersistanceQueryCommand</p>
-			</div>
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>Handy method to create LIMIT and OFFSET part of SQL</p>
-
-<p>You should never use this method directly, use Find methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead.</p><div class="warning"><p><strong>Warning:</strong> You should never use this method directly, use insert methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead</p></div>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">CTPersistanceQueryCommand+ReadMethods.h</code></p>
 			</div>
 			
 			
@@ -1760,6 +1212,489 @@
 </div>
 						</div>
 						
+
+						<a title="ReadMethods Methods" name="task_ReadMethods Methods"></a>
+						<h2 class="task-title">ReadMethods Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/select:isDistinct:" title="select:isDistinct:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/select:isDistinct:">&ndash;&nbsp;select:isDistinct:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>create SELECT part of SQL.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)select:(NSString *)<em>columList</em> isDistinct:(BOOL)<em>isDistinct</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>columList</code></th>
+						<td><p>SELECT column list</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>isDistinct</code></th>
+						<td><p>if YES, will use SELECT DISTINCT when generating SQL</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return CTPersistanceQueryCommand</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>create SELECT part of SQL.</p>
+
+<p>You should never use this method directly, use Find methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceQueryCommand+ReadMethods.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/from:" title="from:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/from:">&ndash;&nbsp;from:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>create FROM part of SQL.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)from:(NSString *)<em>fromList</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>fromList</code></th>
+						<td><p>FROM part in SQL</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return CTPersistanceQueryCommand</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>create FROM part of SQL.</p>
+
+<p>You should never use this method directly, use Find methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceQueryCommand+ReadMethods.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/where:params:" title="where:params:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/where:params:">&ndash;&nbsp;where:params:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>create WHERE part of SQL.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)where:(NSString *)<em>condition</em> params:(NSDictionary *)<em>params</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>condition</code></th>
+						<td><p>where condition</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>params</code></th>
+						<td><p>params for where condition</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return CTPersistanceQueryCommand</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>create WHERE part of SQL.</p>
+
+<p>You should never use this method directly, use Find methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead.</p><div class="warning"><p><strong>Warning:</strong> You should never use this method directly, use insert methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceQueryCommand+ReadMethods.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/orderBy:isDESC:" title="orderBy:isDESC:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/orderBy:isDESC:">&ndash;&nbsp;orderBy:isDESC:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>create ORDER BY part of SQL</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)orderBy:(NSString *)<em>orderBy</em> isDESC:(BOOL)<em>isDESC</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>orderBy</code></th>
+						<td><p>ORDER BY part of SQL</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>isDESC</code></th>
+						<td><p>if YES, use DESC, if NO, use ASC</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return CTPersistanceQueryCommand</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>create ORDER BY part of SQL</p>
+
+<p>You should never use this method directly, use Find methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead.</p><div class="warning"><p><strong>Warning:</strong> You should never use this method directly, use insert methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceQueryCommand+ReadMethods.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/limit:" title="limit:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/limit:">&ndash;&nbsp;limit:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>create LIMIT part of SQL</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)limit:(NSInteger)<em>limit</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>limit</code></th>
+						<td><p>limit count</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return CTPersistanceQueryCommand</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>create LIMIT part of SQL</p>
+
+<p>You should never use this method directly, use Find methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead.</p><div class="warning"><p><strong>Warning:</strong> You should never use this method directly, use insert methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceQueryCommand+ReadMethods.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/offset:" title="offset:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/offset:">&ndash;&nbsp;offset:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>create OFFSET part of SQL</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)offset:(NSInteger)<em>offset</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>offset</code></th>
+						<td><p>offset</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return CTPersistanceQueryCommand</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>create OFFSET part of SQL</p>
+
+<p>You should never use this method directly, use Find methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead.</p><div class="warning"><p><strong>Warning:</strong> You should never use this method directly, use insert methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceQueryCommand+ReadMethods.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/limit:offset:" title="limit:offset:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/limit:offset:">&ndash;&nbsp;limit:offset:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Handy method to create LIMIT and OFFSET part of SQL</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (CTPersistanceQueryCommand *)limit:(NSInteger)<em>limit</em> offset:(NSInteger)<em>offset</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>limit</code></th>
+						<td><p>limit count</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>offset</code></th>
+						<td><p>offset</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>return CTPersistanceQueryCommand</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Handy method to create LIMIT and OFFSET part of SQL</p>
+
+<p>You should never use this method directly, use Find methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead.</p><div class="warning"><p><strong>Warning:</strong> You should never use this method directly, use insert methods in <a href="../Classes/CTPersistanceTable.html">CTPersistanceTable</a> instead</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">CTPersistanceQueryCommand+ReadMethods.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
 					</div>
 					
 					
@@ -1772,7 +1707,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 CasaTaloyum. All rights reserved. Updated: 2015-10-16</p>
+						<p class="copyright">Copyright &copy; 2015 CasaTaloyum. All rights reserved. Updated: 2015-10-22</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
